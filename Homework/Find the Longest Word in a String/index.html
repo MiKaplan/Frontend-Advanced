@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Imperative
+
+    // function findLongestWordLength(str) {
+    //     let arr = str.split(" ");
+    //     let countWord =  "";
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (arr[i].length > countWord.length) {
+    //             countWord = arr[i];
+    //         }
+    //     }
+    //     return countWord.length;
+    // }
+    //
+    // console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
+
+    //Declarative
+
+    function findLongestWordLength(str) {
+        let res = str.split(" ").reduce(function(longestWord, currentWord) {
+            if (currentWord.length > longestWord.length)
+                return currentWord;
+            else
+                return longestWord;
+            }, '');
+        return res.length;
+    }
+
+   console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
+
+</script>
+</body>
+</html>

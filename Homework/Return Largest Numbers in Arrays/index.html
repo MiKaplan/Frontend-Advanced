@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Imperative
+    // function largestOfFour(arr) {
+    //     var res = [];
+    //     for (let i = 0; i < arr.length; i++) {
+    //         arr[i].sort(function (a, b) {
+    //             return b - a;
+    //         });
+    //         res.push(arr[i][0]);
+    //     }
+    //     return res;
+    // }
+    //
+    // console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+
+
+    //Declaration
+    function largestOfFour(arr) {
+        let res = [];
+        for (let arrayInArray of arr) {
+            res.push(Math.max.apply(null, arrayInArray));
+        }
+        return res;
+    }
+
+    console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+</script>
+</body>
+</html>

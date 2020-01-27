@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //imperative method
+
+    // function factorialize(num) {
+    //     let res = 1;
+    //     for (let i = num; i > 0; i--) {
+    //         res *= i;
+    //     }
+    //     return res;
+    // }
+    //
+    // console.log(factorialize(5));
+
+    //declarative method
+
+    function factorialize(num) {
+        return (num !==  1) ? num * factorialize(num -1) : 1;
+    }
+
+    console.log(factorialize(5));
+
+
+
+</script>
+</body>
+</html>
