@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function repeatStringNumTimes(str, num) {
+    //     let result = '';
+    //     for (let i = 0; i < num; i++) {
+    //         result+= str;
+    //     }
+    //     return result;
+    // }
+    // console.log(repeatStringNumTimes('abc', 3))
+
+    let result = '';
+    function repeatStringNumTimes(str, num) {
+        if (result.length !== str.length * num) {
+           result += str;
+           repeatStringNumTimes(str, num);
+        }
+        return result;
+    }
+    console.log(repeatStringNumTimes('abc', 3))
+</script>
+</body>
+</html>

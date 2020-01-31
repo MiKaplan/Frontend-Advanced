@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function truncateString(str, num) {
+        if (str.length > num) {
+            return `${str.slice(0, num)}...`;
+        } else {
+            return str
+        }
+    }
+
+    console.log(truncateString("A-tisket a-tasket A green and yellow basket", 1000));
+</script>
+</body>
+</html>
